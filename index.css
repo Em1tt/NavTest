@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 0;
+}
+nav{
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 5px;
+}
+.logo-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    width: 150px;
+}
+.anchorWrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 20px;
+}
+.anchorWrapper > a{
+    text-decoration: none;
+    color: black;
+}
+nav > div > a:hover{
+    color: #F90093;
+}
+.button{
+    width: 150px;
+    display: grid;
+    place-items: center;
+    padding: 5px;
+    background-color: #F90093;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.buttonMobile{
+    padding: 0 10px;
+    background: none;
+    border: none;
+    color: #F90093;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.buttonMobile:hover{
+    color: #C60F7B;
+}
+.button:hover{
+    background-color: #C60F7B;
+}
+.buttonWrapper{
+    display: flex;
+    flex-flow: row nowrap;
+}
+#mobileButton{
+    display: none;
+}
+@media (max-width: 800px) {
+    #mobileButton{
+        display: block;
+    }
+    .anchorWrapper{
+        display: none;
+    }
+}
