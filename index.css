@@ -9,32 +9,33 @@ nav{
     background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-between;
     padding: 5px;
 }
 .logo-wrapper{
     display: flex;
-    flex-flow: row nowrap;
     align-items: center;
     text-decoration: none;
     color: black;
     width: 150px;
 }
-.anchorWrapper{
+.anchor-wrapper{
     display: flex;
-    flex-flow: row nowrap;
     align-items: center;
     gap: 20px;
 }
-.anchorWrapper > a{
+.anchor-wrapper > a{
     text-decoration: none;
     color: black;
 }
-nav > div > a:hover{
+.anchor-wrapper > a:hover{
     color: #F90093;
 }
-.button{
+.button-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.login{
     width: 150px;
     display: grid;
     place-items: center;
@@ -44,7 +45,10 @@ nav > div > a:hover{
     border-radius: 10px;
     text-decoration: none;
 }
-.buttonMobile{
+.login:hover{
+    background-color: #C60F7B;
+}
+.button-wrapper button{
     padding: 0 10px;
     background: none;
     border: none;
@@ -52,24 +56,17 @@ nav > div > a:hover{
     font-size: 2rem;
     cursor: pointer;
 }
-.buttonMobile:hover{
+.button-wrapper button:hover{
     color: #C60F7B;
 }
-.button:hover{
-    background-color: #C60F7B;
-}
-.buttonWrapper{
-    display: flex;
-    flex-flow: row nowrap;
-}
-#mobileButton{
+.hide-on-desktop{
     display: none;
 }
 @media (max-width: 800px) {
-    #mobileButton{
+    .hide-on-desktop{
         display: block;
     }
-    .anchorWrapper{
+    .anchor-wrapper{
         display: none;
     }
 }
